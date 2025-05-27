@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import { z } from "zod";
 
 const ContactSchema = z.object({
@@ -74,7 +73,7 @@ const ContactForm = () => {
         });
       }
     } catch (error) {
-      setStatus("An unexpected error occurred.");
+      setStatus("An unexpected error occurred." + error);
     } finally {
       setIsSending(false); // <-- Stop sending regardless of outcome
     }

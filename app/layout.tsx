@@ -2,18 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 
-import { Cormorant_Garamond, Raleway } from "next/font/google";
+import { Cormorant_Garamond } from "next/font/google";
 
 import ThemeToggle from "@/components/client/ThemeToggle";
 import AnimatedCursorWrapper from "@/components/client/AnimatedCursorWrapper";
 
 const cormorantGaramond = Cormorant_Garamond({
   weight: ["700"],
-  subsets: ["latin"],
-});
-
-const raleway = Raleway({
-  weight: ["400", "700"],
   subsets: ["latin"],
 });
 

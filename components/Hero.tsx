@@ -14,7 +14,7 @@ const Hero = () => {
         </div>
 
         <h4 className="capitalize text-xl font-semibold">
-          I'm {portfolio.name} and I'm
+          I&apos;m {portfolio.name} and I&apos;m
           <span className="text-rose-500 ml-1">
             <DyTitle title={portfolio.title} />
           </span>

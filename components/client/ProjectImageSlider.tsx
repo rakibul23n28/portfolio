@@ -1,10 +1,11 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
 import { ProjectType } from "@/components/Projects";
+import Image from "next/image";
 
 const ProjectImageSlider = ({ project }: { project: ProjectType }) => {
   return (
@@ -17,10 +18,12 @@ const ProjectImageSlider = ({ project }: { project: ProjectType }) => {
     >
       {project.images.map((imgUrl, i) => (
         <SwiperSlide key={i}>
-          <img
+          <Image
             src={imgUrl}
             alt={`${project.title} ${i + 1}`}
             className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+            width={500}
+            height={500}
           />
         </SwiperSlide>
       ))}
