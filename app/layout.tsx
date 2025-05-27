@@ -3,8 +3,9 @@ import "./globals.css";
 import Header from "@/components/Header";
 
 import { Cormorant_Garamond, Raleway } from "next/font/google";
-import AnimatedCursor from "react-animated-cursor";
+
 import ThemeToggle from "@/components/client/ThemeToggle";
+import AnimatedCursorWrapper from "@/components/client/AnimatedCursorWrapper";
 
 const cormorantGaramond = Cormorant_Garamond({
   weight: ["700"],
@@ -29,15 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${cormorantGaramond.className} antialiased  `}>
-        {/* <AnimatedCursor
-          innerSize={10}
-          outerSize={35}
-          color="0, 150, 255"
-          outerAlpha={0.3}
-          innerScale={1}
-          outerScale={2}
-          trailingSpeed={15}
-        /> */}
+        <AnimatedCursorWrapper />
         <ThemeToggle />
 
         <Header />
