@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import { Cormorant_Garamond, Raleway } from "next/font/google";
+import AnimatedCursor from "react-animated-cursor";
+import ThemeToggle from "@/components/client/ThemeToggle";
+
+const cormorantGaramond = Cormorant_Garamond({
+  weight: ["700"],
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const raleway = Raleway({
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -23,11 +27,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className="scroll-smooth">
+      <body className={`${cormorantGaramond.className} antialiased  `}>
+        {/* <AnimatedCursor
+          innerSize={10}
+          outerSize={35}
+          color="0, 150, 255"
+          outerAlpha={0.3}
+          innerScale={1}
+          outerScale={2}
+          trailingSpeed={15}
+        /> */}
+        <ThemeToggle />
+
+        <Header />
+        <div className="lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 bg-grey-100">
+          {children}
+        </div>
       </body>
     </html>
   );
