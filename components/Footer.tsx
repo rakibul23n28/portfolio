@@ -1,6 +1,6 @@
 // components/Footer.jsx
 import { Facebook, Twitter, Linkedin, Github, Instagram } from "lucide-react";
-import portfolio from "@/data/portfolio.json";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -19,19 +19,19 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-2 underline">Quick Links</h3>
           <ul className="space-y-1 text-sm">
             <li>
-              <a href="/projects" className="hover:text-white">
+              <Link href="/projects" className="hover:text-white">
                 Project Gallery
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="hover:text-white">
+              <Link href="/about" className="hover:text-white">
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-white">
+              <Link href="/contact" className="hover:text-white">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -40,41 +40,41 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Connect</h3>
           <div className="flex space-x-4 mt-2">
-            <a
+            <Link
               href="https://github.com/rakibul23n28"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Github className="w-5 h-5 hover:text-white" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://linkedin.com/in/rakibul-hasan-2111b529a"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Linkedin className="w-5 h-5 hover:text-white" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://twitter.com/rakibul23n28"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Twitter className="w-5 h-5 hover:text-white" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://facebook.com/hasa23n28/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Facebook className="w-5 h-5 hover:text-white" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.instagram.com/hasa23n28/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Instagram className="w-5 h-5 hover:text-white" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

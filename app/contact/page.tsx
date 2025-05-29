@@ -2,6 +2,7 @@ import * as Icons from "lucide-react";
 import React from "react";
 import portfolioData from "@/data/portfolio.json";
 import MailForm from "@/components/client/MailForm";
+import Link from "next/link";
 const socials = portfolioData.socials;
 
 const getLucideIcon = (
@@ -44,13 +45,13 @@ const Contact = () => {
                     />
                   )}
                   <span className="text-xl">
-                    <a
+                    <Link
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       {social.name}
-                    </a>
+                    </Link>
                   </span>
                 </p>
               );

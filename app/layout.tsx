@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         className={`${cormorantGaramond.className} antialiased bg-gradient-to-r from-green-100 to-rose-100  `}
       >
-        {/* <AnimatedCursorWrapper /> */}
+        {/* <LinknimatedCursorWrapper /> */}
 
         <Header />
         <div className="lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 bg-grey-100">

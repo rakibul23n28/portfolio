@@ -1,4 +1,5 @@
 import cetegory from "@/data/cetegory.json" assert { type: "json" };
+import Link from "next/link";
 
 const Cetegory = () => {
   return (
@@ -11,7 +12,7 @@ const Cetegory = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {Object.entries(cetegory).map(([key, project]) => (
-          <a
+          <Link
             key={key}
             href={project.url}
             className="relative h-64 rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow"
@@ -27,7 +28,7 @@ const Cetegory = () => {
                 {project.title}
               </span>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

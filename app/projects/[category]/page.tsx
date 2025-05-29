@@ -3,6 +3,8 @@ import { Eye } from "lucide-react";
 import { getCategoryInfo } from "@/utils/category"; // adjust path as needed
 
 import allProjects from "@/data/projects.json";
+import Image from "next/image";
+import Link from "next/link";
 
 type Project = {
   image: string;
@@ -13,7 +15,7 @@ type Project = {
   readMoreUrl: string;
 };
 
-const page = async ({ params }: { params: { category: string } }) => {
+const page = async ({ params }: { params: Promise<{ category: string }> }) => {
   const { category } = await params;
   const visibleProjects = (allProjects as Record<string, Project[]>)[category];
 
@@ -32,13 +34,15 @@ const page = async ({ params }: { params: { category: string } }) => {
         {visibleProjects.map((project, index) => (
           <div key={index} className="card-style rounded-lg shadow-md p-1">
             <div className="w-full relative group preview cursor-pointer overflow-hidden rounded-lg">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src={project.image}
                 alt={project.title}
                 className="object-cover object-center w-full h-64 rounded-lg transition-transform duration-300 group-hover:scale-105"
               />
               {/* Hover Overlay */}
-              <a
+              <Link
                 href={project.readMoreUrl}
                 className="absolute inset-0 bg-black/50 flex flex-row items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"
               >
@@ -46,7 +50,7 @@ const page = async ({ params }: { params: { category: string } }) => {
                 <span className="text-white  font-medium text-3xl">
                   Preview
                 </span>
-              </a>
+              </Link>
             </div>
 
             <div className="my-4 mx-2">
@@ -64,12 +68,12 @@ const page = async ({ params }: { params: { category: string } }) => {
                   {project.date}
                 </p>
 
-                <a
+                <Link
                   href={project.readMoreUrl}
                   className="inline-block text-green-500 underline hover:text-blue-400"
                 >
                   Read more
-                </a>
+                </Link>
               </div>
             </div>
           </div>

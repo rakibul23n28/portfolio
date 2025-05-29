@@ -2,6 +2,7 @@ import React from "react";
 import portfolio from "@/data/portfolio.json";
 import DyTitle from "./client/DyTitle";
 import { DownloadIcon } from "lucide-react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -20,19 +21,19 @@ const Hero = () => {
         </h4>
         <p className="text-xl text-gray-600">{portfolio.description}</p>
         <div className="flex gap-4 justify-center sm:justify-start mt-4">
-          <a
+          <Link
             href={portfolio.buttons[0].url}
             download // ✅ this triggers the download
             className="px-4 sm:px-6 py-2 bg-rose-600 rounded-full text-white font-bold"
           >
             <DownloadIcon className="inline mx-1" /> Download CV
-          </a>
-          <a
+          </Link>
+          <Link
             href={portfolio.buttons[1].url}
             className="px-4 sm:px-6 py-2 bg-rose-600 rounded-full text-white font-bold"
           >
             Hire me
-          </a>
+          </Link>
         </div>
       </div>
       <div className="flex flex-col gap-2 mb-10 items-center justify-center">

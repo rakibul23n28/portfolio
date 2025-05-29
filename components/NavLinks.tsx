@@ -1,45 +1,47 @@
+import Link from "next/link";
+
 export default function NavLinks() {
   return (
     <ul className="flex flex-col md:flex-row md:space-x-6 p-4 md:p-0 text-[1rem]">
       <li>
-        <a
+        <Link
           href="/"
           className="block px-4 py-2 text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition-colors duration-300"
         >
           Profile
-        </a>
+        </Link>
       </li>
       <li>
-        <a
+        <Link
           href="/about"
           className="block px-4 py-2 text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition-colors duration-300"
         >
           Skills
-        </a>
+        </Link>
       </li>
       <li>
-        <a
+        <Link
           href="/projects"
           className="block px-4 py-2 text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition-colors duration-300"
         >
           Project Gallery
-        </a>
+        </Link>
       </li>
       {/* <li>
-        <a
+        <Link
           href="#"
           className="block px-4 py-2 text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition-colors duration-300"
         >
           Blog
-        </a>
+        </Link>
       </li> */}
       <li>
-        <a
+        <Link
           href="/contact"
           className="block px-4 py-2 text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition-colors duration-300"
         >
           Contact
-        </a>
+        </Link>
       </li>
     </ul>
   );
