@@ -1,6 +1,7 @@
 // components/Footer.jsx
 import { Facebook, Twitter, Linkedin, Github, Instagram } from "lucide-react";
 import Link from "next/link";
+import { fa } from "zod/v4/locales";
 
 export default function Footer() {
   return (
@@ -19,17 +20,25 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-2 underline">Quick Links</h3>
           <ul className="space-y-1 text-sm">
             <li>
-              <Link href="/projects" className="hover:text-white">
+              <Link
+                href="/projects"
+                prefetch={false}
+                className="hover:text-white"
+              >
                 Project Gallery
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-white">
+              <Link href="/about" prefetch={false} className="hover:text-white">
                 Skills
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-white">
+              <Link
+                href="/contact"
+                prefetch={false}
+                className="hover:text-white"
+              >
                 Contact
               </Link>
             </li>

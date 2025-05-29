@@ -10,6 +10,7 @@ export default function Navbar() {
       <div className="relative max-w-screen-xl mx-auto p-4 flex justify-between items-center">
         <Link
           href="/"
+          prefetch={false}
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <Image
