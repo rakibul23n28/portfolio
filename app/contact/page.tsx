@@ -2,7 +2,6 @@ import * as Icons from "lucide-react";
 import React from "react";
 import portfolioData from "@/data/portfolio.json";
 import MailForm from "@/components/client/MailForm";
-import Link from "next/link";
 const socials = portfolioData.socials;
 
 const getLucideIcon = (

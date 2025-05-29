@@ -1,7 +1,6 @@
 // components/Footer.jsx
 import { Facebook, Twitter, Linkedin, Github, Instagram } from "lucide-react";
 import Link from "next/link";
-import { fa } from "zod/v4/locales";
 
 export default function Footer() {
   return (
