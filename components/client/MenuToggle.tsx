@@ -27,7 +27,7 @@ export default function MenuToggle() {
         </svg>
       </button>
       {open && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-md dark:bg-gray-800 z-50">
+        <div className="absolute w-full left-0 top-full bg-white shadow-md dark:bg-gray-800 z-50 ">
           <NavLinks />
         </div>
       )}

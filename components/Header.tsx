@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-50/70 dark:bg-gray-800/70 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
-      <div className=" relative max-w-screen-xl mx-auto p-4 flex justify-between items-center">
+    <nav className="bg-gray-50/70 dark:bg-gray-800/70 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 relative z-[9999]">
+      <div className="relative max-w-screen-xl mx-auto p-4 flex justify-between items-center">
         <Link
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -24,7 +24,7 @@ export default function Navbar() {
             Rakibul H.
           </span>
         </Link>
-        <div className="hidden md:block">
+        <div className="hidden md:block relative">
           <NavLinks />
         </div>
         <div className="md:hidden">
