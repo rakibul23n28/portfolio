@@ -1,0 +1,42 @@
+{
+  "landing-page": {
+    "title": "Landing Page",
+    "url": "/projects/landing-page",
+    "image": "/cetegory/landing-page.jpg"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "url": "/projects/portfolio",
+    "image": "/cetegory/portfolio.jpg"
+  },
+  "e-commerce": {
+    "title": "E-commerce",
+    "url": "/projects/e-commerce",
+    "image": "/cetegory/e-commerce.jpg"
+  },
+  "blog": {
+    "title": "Blog",
+    "url": "/projects/blog",
+    "image": "/cetegory/blog.jpg"
+  },
+  "business-website": {
+    "title": "Business Website",
+    "url": "/projects/business-website",
+    "image": "/cetegory/business-website.jpg"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "url": "/projects/dashboard",
+    "image": "/cetegory/dashboard.jpg"
+  },
+  "github": {
+    "title": "Github",
+    "url": "/projects/github",
+    "image": "/cetegory/github.jpg"
+  },
+  "figma": {
+    "title": "Figma",
+    "url": "/projects/figma",
+    "image": "/cetegory/figma.jpg"
+  }
+}

@@ -1,7 +1,7 @@
 import * as Icons from "lucide-react";
 import React from "react";
 import portfolioData from "@/data/portfolio.json";
-import MailForm from "./client/MailForm";
+import MailForm from "@/components/client/MailForm";
 const socials = portfolioData.socials;
 
 const getLucideIcon = (
@@ -15,7 +15,7 @@ const getLucideIcon = (
 
 const Contact = () => {
   return (
-    <section className="py-16 " id="contact">
+    <section className="py-10" id="contact">
       <div className="flex flex-col gap-2 mb-2 md:mb-4 flex-4">
         <h2 className="text-3xl  font-serif font-semibold">
           Let&apos;s get in touch

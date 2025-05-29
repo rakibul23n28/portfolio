@@ -2,7 +2,7 @@
   "name": "Rakibul Hasan",
   "title": ["FullStack Developer", "Website Designer"],
   "subtitle": "I'm Rakibul Hasan and I'm a web developer",
-  "description": "I am a dedicated and innovative FullStack Developer passionate about creating impactful digital experiences. With a keen eye for detail and a commitment to excellence, I specialize in designing and developing solutions that combine creativity with functionality.",
+  "description": "I am a dedicated and innovative FullStack Developer passionate about creating impactful digital experiences.I specialize in designing and developing solutions that combine creativity with functionality.",
   "personalInfo": {
     "birthday": "01 October 2002",
     "website": "https://github.com/rakibul23n28",
@@ -52,7 +52,7 @@
   "socials": [
     {
       "name": "@hasa23n28",
-      "url": "https://www.facebook.com/rakibul23n28",
+      "url": "https://www.facebook.com/hasa23n28/",
       "icon": "FacebookIcon",
       "color": "#1877F2"
     },
@@ -68,6 +68,12 @@
       "url": "https://github.com/rakibul23n28",
       "_comment": "do not use color for github",
       "icon": "GithubIcon"
+    },
+    {
+      "name": "rakibul.hasan",
+      "url": "https://twitter.com/rakibul23n28",
+      "icon": "TwitterIcon",
+      "color": "#1DA1F2"
     },
     {
       "name": "@hasa23n28",

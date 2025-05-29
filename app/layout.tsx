@@ -4,8 +4,7 @@ import Header from "@/components/Header";
 
 import { Cormorant_Garamond } from "next/font/google";
 
-import ThemeToggle from "@/components/client/ThemeToggle";
-import AnimatedCursorWrapper from "@/components/client/AnimatedCursorWrapper";
+import Footer from "@/components/Footer";
 
 const cormorantGaramond = Cormorant_Garamond({
   weight: ["700"],
@@ -24,14 +23,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${cormorantGaramond.className} antialiased  `}>
-        <AnimatedCursorWrapper />
-        <ThemeToggle />
+      <body
+        className={`${cormorantGaramond.className} antialiased bg-gradient-to-r from-green-100 to-rose-100  `}
+      >
+        {/* <AnimatedCursorWrapper /> */}
 
         <Header />
         <div className="lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 bg-grey-100">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );

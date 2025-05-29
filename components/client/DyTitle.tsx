@@ -7,8 +7,8 @@ export default function DyTitle({ title }: { title: string[] }) {
       words={title}
       loop={true}
       cursor
-      cursorStyle="_"
-      typeSpeed={70}
+      cursorStyle="."
+      typeSpeed={100}
       deleteSpeed={50}
       delaySpeed={4000}
     />
