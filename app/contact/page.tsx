@@ -45,13 +45,13 @@ const Contact = () => {
                     />
                   )}
                   <span className="text-xl">
-                    <Link
+                    <a
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       {social.name}
-                    </Link>
+                    </a>
                   </span>
                 </p>
               );

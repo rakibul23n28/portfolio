@@ -49,41 +49,41 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Connect</h3>
           <div className="flex space-x-4 mt-2">
-            <Link
+            <a
               href="https://github.com/rakibul23n28"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Github className="w-5 h-5 hover:text-white" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://linkedin.com/in/rakibul-hasan-2111b529a"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Linkedin className="w-5 h-5 hover:text-white" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://twitter.com/rakibul23n28"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Twitter className="w-5 h-5 hover:text-white" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://facebook.com/hasa23n28/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Facebook className="w-5 h-5 hover:text-white" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://www.instagram.com/hasa23n28/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Instagram className="w-5 h-5 hover:text-white" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
