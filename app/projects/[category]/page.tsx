@@ -44,6 +44,7 @@ const page = async ({ params }: { params: Promise<{ category: string }> }) => {
               {/* Hover Overlay */}
               <Link
                 href={project.readMoreUrl}
+                prefetch={false}
                 className="absolute inset-0 bg-black/50 flex flex-row items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"
               >
                 <Eye className="text-rose-400 w-8 h-8" />
@@ -70,6 +71,7 @@ const page = async ({ params }: { params: Promise<{ category: string }> }) => {
 
                 <Link
                   href={project.readMoreUrl}
+                  prefetch={false}
                   className="inline-block text-green-500 underline hover:text-blue-400"
                 >
                   Read more

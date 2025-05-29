@@ -4,50 +4,16 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-200 py-10 mt-10">
-      <div className="max-w-screen-xl mx-auto p-4 justify-between items-center grid grid-cols-1 md:divide-x-2 divide-rose-500 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <footer className="bg-cyan-900 text-gray-200 mt-10">
+      <div className="max-w-screen-xl mx-auto p-3 flex md:flex-row flex-col justify-between items-center gap-8">
         {/* Brand/Logo */}
         <div>
-          <h2 className="text-2xl font-bold text-white">Rakibul Hasan</h2>
-          <p className="text-sm mt-2 text-gray-400">
-            It&apos;s my digital signature for this real world.
-          </p>
-        </div>
-
-        {/* Navigation */}
-        <div>
-          <h3 className="text-lg font-semibold mb-2 underline">Quick Links</h3>
-          <ul className="space-y-1 text-sm">
-            <li>
-              <Link
-                href="/projects"
-                prefetch={false}
-                className="hover:text-white"
-              >
-                Project Gallery
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" prefetch={false} className="hover:text-white">
-                Skills
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                prefetch={false}
-                className="hover:text-white"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
+          <h2 className="text-xl font-bold text-gray-200">Rakibul Hasan</h2>
         </div>
 
         {/* Socials */}
         <div>
-          <h3 className="text-lg font-semibold mb-2">Connect</h3>
-          <div className="flex space-x-4 mt-2">
+          <div className="flex space-x-4 ">
             <a
               href="https://github.com/rakibul23n28"
               target="_blank"
@@ -85,10 +51,9 @@ export default function Footer() {
             </a>
           </div>
         </div>
-      </div>
-
-      <div className="mt-10 border-t border-gray-700 pt-4 text-center text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} YourName. All rights reserved.
+        <div className="text-center text-sm text-gray-300">
+          &copy; 2025 YourName. All rights reserved.
+        </div>
       </div>
     </footer>
   );

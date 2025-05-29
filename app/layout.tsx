@@ -22,16 +22,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth h-full">
       <body
-        className={`${cormorantGaramond.className} antialiased bg-gradient-to-r from-green-100 to-rose-100  `}
+        className={`${cormorantGaramond.className} antialiased bg-gradient-to-r from-green-100 to-rose-100 flex flex-col min-h-screen`}
       >
-        {/* <LinknimatedCursorWrapper /> */}
-
         <Header />
-        <div className="lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 bg-grey-100">
+
+        <main className="flex-grow lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 bg-grey-100">
           {children}
-        </div>
+        </main>
+
         <Footer />
       </body>
     </html>
