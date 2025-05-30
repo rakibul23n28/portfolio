@@ -6,46 +6,42 @@ export default function NavLinks() {
       <li>
         <Link
           href="/"
-          prefetch={false}
           className="block px-4 py-2 text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition-colors duration-300"
         >
           Profile
         </Link>
       </li>
       <li>
-        <Link
-          href="/about"
-          prefetch={false}
+        <a
+          href="#about"
           className="block px-4 py-2 text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition-colors duration-300"
         >
           Skills
-        </Link>
+        </a>
       </li>
       <li>
-        <Link
-          href="/projects"
-          prefetch={false}
+        <a
+          href="#projects"
           className="block px-4 py-2 text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition-colors duration-300"
         >
           Project Gallery
-        </Link>
+        </a>
       </li>
       {/* <li>
-        <Link
+        <a
           href="#"
           className="block px-4 py-2 text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition-colors duration-300"
         >
           Blog
-        </Link>
+        </a>
       </li> */}
       <li>
-        <Link
-          href="/contact"
-          prefetch={false}
+        <a
+          href="#contact"
           className="block px-4 py-2 text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-400 transition-colors duration-300"
         >
           Contact
-        </Link>
+        </a>
       </li>
     </ul>
   );

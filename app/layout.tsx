@@ -28,7 +28,7 @@ export default function RootLayout({
       >
         <Header />
 
-        <main className="flex-grow lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 bg-grey-100">
+        <main className="flex-grow lg:w-[80%] w-full mx-auto px-4 sm:px-10 lg:px-0">
           {children}
         </main>
 

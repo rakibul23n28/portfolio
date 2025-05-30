@@ -16,7 +16,7 @@ const Hero = () => {
         <h4 className="capitalize md:text-8xl text-7xl font-semibold">
           I&apos;m {portfolio.name}
         </h4>
-        <h4 className="text-rose-500 ml-1 md:text-7xl text-6xl md:mb-10 mb-5">
+        <h4 className="text-rose-500 ml-1 md:text-7xl text-6xl ">
           <DyTitle title={portfolio.title} />
         </h4>
         <p className="text-xl text-gray-600">{portfolio.description}</p>

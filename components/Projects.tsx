@@ -1,8 +1,7 @@
 import React from "react";
 import { Eye } from "lucide-react";
-import { getCategoryInfo } from "@/utils/category"; // adjust path as needed
 
-import allProjects from "@/data/projects.json";
+import visibleProjects from "@/data/projects.json";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,23 +14,16 @@ type Project = {
   readMoreUrl: string;
 };
 
-const page = async ({ params }: { params: Promise<{ category: string }> }) => {
-  const { category } = await params;
-  const visibleProjects = (allProjects as Record<string, Project[]>)[category];
-
-  const categoryInfo = getCategoryInfo(category);
-
+const Projects = () => {
   return (
-    <div className="mt-4">
+    <div className="my-10" id="projects">
       <div className="flex flex-col gap-2 my-4">
-        <h2 className="text-3xl font-serif font-semibold">
-          {categoryInfo.title}
-        </h2>
+        <h2 className="text-4xl font-serif font-semibold">Project Gellery</h2>
         <span className="w-16 h-[4px] bg-rose-500 rounded"></span>
         <span className="w-8 h-[4px] bg-rose-500 rounded"></span>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {visibleProjects.map((project, index) => (
+        {visibleProjects.map((project: Project, index) => (
           <div key={index} className="card-style rounded-lg shadow-md p-1">
             <div className="w-full relative group preview cursor-pointer overflow-hidden rounded-lg">
               <Image
@@ -85,4 +77,4 @@ const page = async ({ params }: { params: Promise<{ category: string }> }) => {
   );
 };
 
-export default page;
+export default Projects;

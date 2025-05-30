@@ -1,13 +1,13 @@
 import Hero from "@/components/Hero";
-import About from "@/app/about/page";
-import Contact from "@/app/contact/page";
-import CetegoryWrapper from "@/components/client/CetegoryWrapper";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <CetegoryWrapper />
+      <Projects />
       <About />
       <Contact />
     </>

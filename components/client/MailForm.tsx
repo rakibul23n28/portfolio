@@ -82,7 +82,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col py-6 space-y-6 md:py-0 w-full flex-4"
+      className="flex flex-col space-y-6 md:py-0 w-full flex-4"
     >
       <label className="block">
         <span className="mb-1">Full name</span>

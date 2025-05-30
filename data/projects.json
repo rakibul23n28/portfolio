@@ -1,99 +1,54 @@
-{
-  "landing-page": [
-    {
-      "image": "/projects/landing1.png",
-      "category": "Landing Page",
-      "title": "Landing Page",
-      "description": "A landing page for a project.",
-      "date": "May 6, 2025",
-      "readMoreUrl": "https://github.com/rakibul23n28/landing-page"
-    }
-  ],
-  "portfolio": [
-    {
-      "image": "/projects/portfolio1.png",
-      "category": "Portfolio",
-      "title": "My Portfolio",
-      "description": "A portfolio website built with Next.js and Tailwind CSS.",
-      "date": "May 26, 2025",
-      "readMoreUrl": "https://github.com/rakibul23n28/portfolio"
-    }
-  ],
-  "e-commerce": [
-    {
-      "image": "/projects/e-commerce1.png",
-      "category": "E-commerce",
-      "title": "E-commerce",
-      "description": "A e-commerce website built with Next.js and Tailwind CSS.",
-      "date": "May 26, 2025",
-      "readMoreUrl": "https://github.com/rakibul23n28/e-commerce"
-    }
-  ],
-  "blog": [
-    {
-      "image": "/projects/commune1.png",
-      "category": "Community",
-      "title": "This is Commune",
-      "description": "this is a react based developer friendly side.user's can create a profile for there blogs, post, merketplace.",
-      "date": "January 1, 2025",
-      "readMoreUrl": "https://github.com/rakibul23n28/Commune"
-    },
+[
+  {
+    "image": "/projects/portfolio1.png",
+    "category": "Portfolio",
+    "title": "My Portfolio",
+    "description": "A portfolio website built with Next.js and Tailwind CSS.",
+    "date": "May 26, 2025",
+    "readMoreUrl": "https://github.com/rakibul23n28/portfolio"
+  },
 
-    {
-      "image": "/projects/startup1.png",
-      "category": "Startup-Blog",
-      "title": "Post Your Startup",
-      "description": "A platform to share your startup journey, ideas, and experiences with the community.",
-      "date": "May 6, 2025",
-      "readMoreUrl": "https://github.com/rakibul23n28/Startup-Blog"
-    }
-  ],
-  "business-website": [
-    {
-      "image": "/projects/website1.png",
-      "category": "Business Website",
-      "title": "Business Website",
-      "description": "A business website built with Next.js and Tailwind CSS.",
-      "date": "May 26, 2025",
-      "readMoreUrl": "https://github.com/rakibul23n28/business-website"
-    }
-  ],
-  "dashboard": [
-    {
-      "image": "/projects/dashboard1.png",
-      "category": "Dashboard",
-      "title": "Dashboard",
-      "description": "A dashboard built with Next.js and Tailwind CSS.",
-      "date": "May 26, 2025",
-      "readMoreUrl": "https://github.com/rakibul23n28/dashboard"
-    }
-  ],
-  "github": [
-    {
-      "image": "/projects/cprogram1.png",
-      "category": "C-C++ Programming",
-      "title": "Learn Data Structures and Algorithms",
-      "description": "A comprehensive guide to understanding data structures and algorithms in C and C++.",
-      "date": "January 23, 2023",
-      "readMoreUrl": "https://github.com/rakibul23n28/c-cpp"
-    },
-    {
-      "image": "/projects/image-pro1.png",
-      "category": "Image-processing",
-      "title": "Image Processing with OpenCV and gemeni AI",
-      "description": "A project that combines OpenCV and gemeni AI for advanced image processing tasks.",
-      "date": "May 23, 2025",
-      "readMoreUrl": "https://github.com/rakibul23n28/image-processing-gemeni-api"
-    }
-  ],
-  "figma": [
-    {
-      "image": "/projects/figma1.png",
-      "category": "Figma Design",
-      "title": "Figma Design System",
-      "description": "A comprehensive design system built with Figma to streamline the design process.",
-      "date": "May 15, 2025",
-      "readMoreUrl": "https://www.figma.com/proto/zaL1AeGhNtceER4kIEHg8M/Untitled?node-id=41-129&t=bRgOTG5vII7onaF3-0&scaling=min-zoom&content-scaling=fixed&page-id=2%3A2"
-    }
-  ]
-}
+  {
+    "image": "/projects/commune1.png",
+    "category": "Community",
+    "title": "This is Commune",
+    "description": "this is a react based developer friendly side.user's can create a profile for there blogs, post, merketplace.",
+    "date": "January 1, 2025",
+    "readMoreUrl": "https://github.com/rakibul23n28/Commune"
+  },
+
+  {
+    "image": "/projects/startup1.png",
+    "category": "Startup-Blog",
+    "title": "Post Your Startup",
+    "description": "A platform to share your startup journey, ideas, and experiences with the community.",
+    "date": "May 6, 2025",
+    "readMoreUrl": "https://github.com/rakibul23n28/Startup-Blog"
+  },
+
+  {
+    "image": "/projects/cprogram1.png",
+    "category": "C-C++ Programming",
+    "title": "Learn Data Structures and Algorithms",
+    "description": "A comprehensive guide to understanding data structures and algorithms in C and C++.",
+    "date": "January 23, 2023",
+    "readMoreUrl": "https://github.com/rakibul23n28/c-cpp"
+  },
+  {
+    "image": "/projects/image-pro1.png",
+    "category": "Image-processing",
+    "title": "Image Processing with OpenCV and gemeni AI",
+    "description": "A project that combines OpenCV and gemeni AI for advanced image processing tasks.",
+    "date": "May 23, 2025",
+    "readMoreUrl": "https://github.com/rakibul23n28/image-processing-gemeni-api"
+  },
+
+  {
+    "image": "/projects/figma1.png",
+    "category": "Figma Design",
+    "title": "Figma Design System",
+    "description": "A comprehensive design system built with Figma to streamline the design process.",
+    "date": "May 15, 2025",
+    "readMoreUrl": "https://www.figma.com/proto/zaL1AeGhNtceER4kIEHg8M/Untitled?node-id=41-129&t=bRgOTG5vII7onaF3-0&scaling=min-zoom&content-scaling=fixed&page-id=2%3A2"
+  }
+]
