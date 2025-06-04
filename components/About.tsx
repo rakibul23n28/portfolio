@@ -16,12 +16,14 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-2 md:gap-6 items-center justify-between font-serif">
               <ul className="w-full text-gray-900 dark:text-gray-200">
                 <li className="py-2 border-b border-gray-200 dark:border-gray-600">
-                  <span className="font-bold">Birthday :</span>{" "}
-                  {portfolio.personalInfo.birthday}
+                  <span className="font-bold">Nationality :</span>{" "}
+                  {portfolio.personalInfo.nationality}
                 </li>
                 <li className="py-2 border-b border-gray-200 dark:border-gray-600">
-                  <span className="font-bold">Website :</span>{" "}
-                  {portfolio.personalInfo.website}
+                  <a href={portfolio.personalInfo.website}>
+                    <span className="font-bold">Website :</span>{" "}
+                    {portfolio.personalInfo.website}
+                  </a>
                 </li>
                 <li className="py-2 border-b border-gray-200 dark:border-gray-600">
                   <span className="font-bold">Degree :</span>{" "}

@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center text-sm text-gray-300">
-          &copy; 2025 YourName. All rights reserved.
+          &copy; 2025 rakibul h. All rights reserved.
         </div>
       </div>
     </footer>
