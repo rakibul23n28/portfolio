@@ -1,9 +1,7 @@
 import React from "react";
-import { Eye } from "lucide-react";
 
 import visibleProjects from "@/data/projects.json";
 import Image from "next/image";
-import Link from "next/link";
 
 type Project = {
   image: string;
@@ -26,24 +24,19 @@ const Projects = () => {
         {visibleProjects.map((project: Project, index) => (
           <div key={index} className="card-style rounded-lg shadow-md p-1">
             <div className="w-full relative group preview cursor-pointer overflow-hidden rounded-lg">
-              <Image
-                width={500}
-                height={500}
-                src={project.image}
-                alt={project.title}
-                className="object-cover object-center w-full h-64 rounded-lg transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Hover Overlay */}
-              <Link
+              <a
                 href={project.readMoreUrl}
-                prefetch={false}
-                className="absolute inset-0 bg-black/50 flex flex-row items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Eye className="text-rose-400 w-8 h-8" />
-                <span className="text-white  font-medium text-3xl">
-                  Preview
-                </span>
-              </Link>
+                <Image
+                  width={500}
+                  height={500}
+                  src={project.image}
+                  alt={project.title}
+                  className="object-cover object-center w-full h-64 rounded-lg transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
             </div>
 
             <div className="my-4 mx-2">
@@ -61,13 +54,14 @@ const Projects = () => {
                   {project.date}
                 </p>
 
-                <Link
+                <a
                   href={project.readMoreUrl}
-                  prefetch={false}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block text-green-500 underline hover:text-blue-400"
                 >
                   Read more
-                </Link>
+                </a>
               </div>
             </div>
           </div>
