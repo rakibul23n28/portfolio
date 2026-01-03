@@ -29,6 +29,10 @@
       "level": "92"
     },
     {
+      "name": "TypeScript",
+      "level": "80"
+    },
+    {
       "name": "React/Next.js",
       "level": "90"
     },

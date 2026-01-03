@@ -50,5 +50,29 @@
     "description": "A comprehensive design system built with Figma to streamline the design process.",
     "date": "May 15, 2025",
     "readMoreUrl": "https://www.figma.com/proto/zaL1AeGhNtceER4kIEHg8M/Untitled?node-id=41-129&t=bRgOTG5vII7onaF3-0&scaling=min-zoom&content-scaling=fixed&page-id=2%3A2"
+  },
+  {
+    "image": "/projects/webgputriangle.png",
+    "category": "Graphics Programming",
+    "title": "Basic WebGPU Triangle",
+    "description": "A minimal WebGPU project rendering a basic triangle to understand GPU pipelines, shaders, buffers, and the WebGPU rendering flow.",
+    "date": "December 25, 2026",
+    "readMoreUrl": "https://github.com/rakibul23n28/Webgpu-AtoZ/tree/master/webgpu-triangle"
+  },
+  {
+    "image": "/projects/shooting.png",
+    "category": "Game Development",
+    "title": "2D Shooting Game with WebGPU",
+    "description": "A 2D shooting game built with WebGPU and TypeScript to explore modern GPU architecture, rendering pipelines, shaders, collision detection, and real-time game loops.",
+    "date": "January 2, 2026",
+    "readMoreUrl": "https://github.com/rakibul23n28/webgpu-shooting-game"
+  },
+  {
+    "image": "/projects/uiu-shuttle-bus.png",
+    "category": "Full Stack",
+    "title": "University Shuttle Bus – Real-Time Tracking & Chat",
+    "description": "A real-time university shuttle bus tracking system with live location sharing, ETA calculation, and route-based chat using Next.js, Socket.IO, and Leaflet.",
+    "date": "November 2, 2026",
+    "readMoreUrl": "https://github.com/rakibul23n28/uiu-shuttle-bus"
   }
 ]
