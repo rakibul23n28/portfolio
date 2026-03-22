@@ -2,7 +2,7 @@
   "name": "Rakibul Hasan",
   "title": ["FullStack Developer", "Website Designer"],
   "subtitle": "I'm Rakibul Hasan and I'm a web developer",
-  "description": "I am a dedicated and innovative FullStack Developer passionate about creating impactful digital experiences.I specialize in designing and developing solutions that combine creativity with functionality.",
+  "description": "Full Stack Developer who enjoys solving problems and building applications from scratch. With strong problem-solving experience, I focus on writing clean code, building smooth user experiences, and continuously learning new technologies.",
   "personalInfo": {
     "nationality": "Bangladeshi",
     "website": "https://portfolio-blush-theta-43.vercel.app/",
@@ -26,7 +26,7 @@
   "skills": [
     {
       "name": "HTML/CSS/JavaScript",
-      "level": "92"
+      "level": "97"
     },
     {
       "name": "TypeScript",
@@ -34,11 +34,11 @@
     },
     {
       "name": "React/Next.js",
-      "level": "90"
+      "level": "95"
     },
     {
       "name": "Node.js/Express",
-      "level": "80"
+      "level": "90"
     },
     {
       "name": "MySQL/MongoDB",
@@ -48,8 +48,13 @@
       "name": "Git/GitHub",
       "level": "70"
     },
+
     {
       "name": "Figma",
+      "level": "100"
+    },
+    {
+      "name": "API Integration",
       "level": "100"
     }
   ],

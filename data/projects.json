@@ -5,7 +5,17 @@
     "title": "My Portfolio",
     "description": "A portfolio website built with Next.js and Tailwind CSS.",
     "date": "May 26, 2025",
-    "readMoreUrl": "https://github.com/rakibul23n28/portfolio"
+    "readMoreUrl": "https://github.com/rakibul23n28/portfolio",
+    "languages": ["Next.js", "NodeMailer", "TypeScript"]
+  },
+  {
+    "image": "/projects/student-por1.png",
+    "category": "Student Portal",
+    "title": "University Student Colaboration Portal",
+    "description": "Student platform for sharing academic materials with authentication and contribution tracking. Includes admin panel for user management, moderation, spam control, and analytics. Added analytics dashboard for platform insights and activity monitoring.",
+    "date": "June 1, 2025",
+    "readMoreUrl": "https://github.com/rakibul23n28/student-portal",
+    "languages": ["Next.js", "Prisma", "TypeScript", "Clerk"]
   },
 
   {
@@ -14,7 +24,8 @@
     "title": "This is Commune",
     "description": "this is a react based developer friendly side.user's can create a profile for there blogs, post, merketplace.",
     "date": "January 1, 2025",
-    "readMoreUrl": "https://github.com/rakibul23n28/Commune"
+    "readMoreUrl": "https://github.com/rakibul23n28/Commune",
+    "languages": ["Express", "Node.js", "Socket.IO", "JavaScript", "EJS"]
   },
 
   {
@@ -23,7 +34,8 @@
     "title": "Post Your Startup",
     "description": "A platform to share your startup journey, ideas, and experiences with the community.",
     "date": "May 6, 2025",
-    "readMoreUrl": "https://github.com/rakibul23n28/Startup-Blog"
+    "readMoreUrl": "https://github.com/rakibul23n28/Startup-Blog",
+    "languages": ["Next.js", "Sanity", "TypeScript"]
   },
 
   {
@@ -32,7 +44,8 @@
     "title": "Learn Data Structures and Algorithms",
     "description": "A comprehensive guide to understanding data structures and algorithms in C and C++.",
     "date": "January 23, 2023",
-    "readMoreUrl": "https://github.com/rakibul23n28/c-cpp"
+    "readMoreUrl": "https://github.com/rakibul23n28/c-cpp",
+    "languages": ["C", "C++"]
   },
   {
     "image": "/projects/image-pro1.png",
@@ -40,7 +53,8 @@
     "title": "Image Processing with OpenCV and gemeni AI",
     "description": "A project that combines OpenCV and gemeni AI for advanced image processing tasks.",
     "date": "May 23, 2025",
-    "readMoreUrl": "https://github.com/rakibul23n28/image-processing-gemeni-api"
+    "readMoreUrl": "https://github.com/rakibul23n28/image-processing-gemeni-api",
+    "languages": ["Python", "OpenCV", "gemeni AI"]
   },
 
   {
@@ -49,7 +63,8 @@
     "title": "Figma Design System",
     "description": "A comprehensive design system built with Figma to streamline the design process.",
     "date": "May 15, 2025",
-    "readMoreUrl": "https://www.figma.com/proto/zaL1AeGhNtceER4kIEHg8M/Untitled?node-id=41-129&t=bRgOTG5vII7onaF3-0&scaling=min-zoom&content-scaling=fixed&page-id=2%3A2"
+    "readMoreUrl": "https://www.figma.com/proto/zaL1AeGhNtceER4kIEHg8M/Untitled?node-id=41-129&t=bRgOTG5vII7onaF3-0&scaling=min-zoom&content-scaling=fixed&page-id=2%3A2",
+    "languages": ["Figma"]
   },
   {
     "image": "/projects/webgputriangle.png",
@@ -57,7 +72,8 @@
     "title": "Basic WebGPU Triangle",
     "description": "A minimal WebGPU project rendering a basic triangle to understand GPU pipelines, shaders, buffers, and the WebGPU rendering flow.",
     "date": "December 25, 2026",
-    "readMoreUrl": "https://github.com/rakibul23n28/Webgpu-AtoZ/tree/master/webgpu-triangle"
+    "readMoreUrl": "https://github.com/rakibul23n28/Webgpu-AtoZ/tree/master/webgpu-triangle",
+    "languages": ["WebGPU", "TypeScript"]
   },
   {
     "image": "/projects/shooting.png",
@@ -65,7 +81,8 @@
     "title": "2D Shooting Game with WebGPU",
     "description": "A 2D shooting game built with WebGPU and TypeScript to explore modern GPU architecture, rendering pipelines, shaders, collision detection, and real-time game loops.",
     "date": "January 2, 2026",
-    "readMoreUrl": "https://github.com/rakibul23n28/webgpu-shooting-game"
+    "readMoreUrl": "https://github.com/rakibul23n28/webgpu-shooting-game",
+    "languages": ["WebGPU", "TypeScript"]
   },
   {
     "image": "/projects/uiu-shuttle-bus.png",
@@ -73,6 +90,7 @@
     "title": "University Shuttle Bus – Real-Time Tracking & Chat",
     "description": "A real-time university shuttle bus tracking system with live location sharing, ETA calculation, and route-based chat using Next.js, Socket.IO, and Leaflet.",
     "date": "November 2, 2026",
-    "readMoreUrl": "https://github.com/rakibul23n28/uiu-shuttle-bus"
+    "readMoreUrl": "https://github.com/rakibul23n28/uiu-shuttle-bus",
+    "languages": ["Next.js", "Socket.IO", "Leaflet"]
   }
 ]
