@@ -75,7 +75,7 @@ const ContactForm = () => {
           message: data.errors?.message,
         });
       }
-    } catch (error) {
+    } catch {
       setStatus("An unexpected error occurred. Please try again later.");
     } finally {
       setIsSending(false);
@@ -186,12 +186,12 @@ const ContactForm = () => {
         {status && (
           <div
             className={`flex items-center gap-2 p-3.5 rounded-xl border text-sm font-medium transition-all duration-500 ${
-              status.includes("successfully")
+              status.toLowerCase().includes("successfully")
                 ? "bg-green-50 dark:bg-green-500/10 border-green-200 dark:border-green-800 text-green-700 dark:text-green-400"
                 : "bg-red-50 dark:bg-red-500/10 border-red-200 dark:border-red-800 text-red-700 dark:text-red-400"
             }`}
           >
-            {status.includes("successfully") ? (
+            {status.toLowerCase().includes("successfully") ? (
               <CheckCircle2 size={18} className="flex-shrink-0" />
             ) : (
               <AlertCircle size={18} className="flex-shrink-0" />
