@@ -7,7 +7,7 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 
 const navItems = [
   { name: "Profile", href: "/" },
-  { name: "Skills", href: "#about" },
+  { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
@@ -46,6 +46,11 @@ export default function Header() {
             item.element !== null,
         );
       const currentSection = sections
+        .sort(
+          (first, second) =>
+            first.element.getBoundingClientRect().top -
+            second.element.getBoundingClientRect().top,
+        )
         .filter(({ element }) => element.getBoundingClientRect().top <= 180)
         .at(-1);
       setActive(currentSection?.href ?? "/");
@@ -133,11 +138,11 @@ export default function Header() {
           </Link>
 
           <nav className="hidden items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface)] px-1 py-1 md:flex">
-            <div className="relative flex items-center gap-1.5">
+            <div className="relative grid grid-cols-4 items-center">
               <span
                 className="absolute left-0 top-1 bottom-1 rounded-full bg-[linear-gradient(135deg,rgba(255,45,85,0.9),rgba(255,134,109,0.75))] shadow-[0_0_18px_rgba(255,45,85,0.4)] transition-[transform,width] duration-300 ease-out"
                 style={{
-                  width: "calc(25% - 0.375rem)",
+                  width: "25%",
                   transform: `translateX(${activeIndex * 100}%)`,
                 }}
               />
@@ -148,7 +153,7 @@ export default function Header() {
                     key={link.name}
                     href={link.href}
                     onClick={(event) => handleNavigation(event, link.href)}
-                    className={`relative z-10 rounded-full px-4 py-2 text-[11px] font-medium tracking-[0.14em] uppercase transition-colors duration-200 ${
+                    className={`relative z-10 rounded-full px-4 py-2 text-center text-[11px] font-medium tracking-[0.14em] uppercase transition-colors duration-200 ${
                       isActive ? "text-[#08080C]" : "text-[var(--muted)] hover:text-[var(--text)]"
                     }`}
                   >

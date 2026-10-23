@@ -65,7 +65,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="lg:col-span-5 rounded-[2rem] border border-[var(--line)] bg-[rgba(17,17,24,0.75)] p-6 shadow-[0_28px_70px_rgba(0,0,0,0.3)] sm:p-8">
+        <div id="skills" className="lg:col-span-5 rounded-[2rem] border border-[var(--line)] bg-[rgba(17,17,24,0.75)] p-6 shadow-[0_28px_70px_rgba(0,0,0,0.3)] sm:p-8">
           <div className="mb-6">
             <h3 className="text-2xl font-semibold tracking-[-0.04em] text-white">Technical Mastery</h3>
             <p className="mt-2 text-sm text-[var(--muted)]">Proficiency weighted by project experience.</p>
