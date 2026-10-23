@@ -2,12 +2,7 @@
 
 import React, { useState } from "react";
 import { z } from "zod";
-import {
-  Loader2,
-  SendHorizontal,
-  AlertCircle,
-  CheckCircle2,
-} from "lucide-react";
+import { Loader2, SendHorizontal, AlertCircle, CheckCircle2 } from "lucide-react";
 
 const ContactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -28,9 +23,7 @@ const ContactForm = () => {
   const [status, setStatus] = useState("");
   const [isSending, setIsSending] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: undefined });
   };
@@ -83,10 +76,9 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col space-y-5 w-full">
-      {/* 👤 Name Field */}
-      <div className="flex flex-col gap-1.5">
-        <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+    <form onSubmit={handleSubmit} className="flex w-full flex-col gap-5">
+      <div className="flex flex-col gap-2">
+        <label className="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
           Full name
         </label>
         <input
@@ -96,23 +88,20 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="John Doe"
           disabled={isSending}
-          className={`block w-full px-4 py-3 rounded-xl border bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm shadow-sm transition-all duration-300 focus:outline-none focus:ring-4 ${
-            errors.name
-              ? "border-red-400 focus:ring-red-500/10 focus:border-red-500"
-              : "border-gray-200 dark:border-gray-700 focus:ring-rose-500/10 focus:border-rose-500 hover:border-rose-300 dark:hover:border-rose-500"
+          className={`block w-full rounded-2xl border bg-[rgba(255,255,255,0.02)] px-4 py-3.5 text-sm text-white placeholder:text-[var(--muted)] transition-all duration-200 focus:outline-none ${
+            errors.name ? "border-red-400/80" : "border-[var(--line)] focus:border-[rgba(255,45,85,0.7)]"
           }`}
         />
         {errors.name && (
-          <div className="flex items-center gap-1.5 mt-1 text-red-500">
-            <AlertCircle size={14} />
-            <span className="text-xs font-medium">{errors.name}</span>
+          <div className="flex items-center gap-1.5 text-red-400">
+            <AlertCircle className="h-4 w-4" />
+            <span className="text-xs">{errors.name}</span>
           </div>
         )}
       </div>
 
-      {/* ✉️ Email Field */}
-      <div className="flex flex-col gap-1.5">
-        <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+      <div className="flex flex-col gap-2">
+        <label className="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
           Email address
         </label>
         <input
@@ -122,23 +111,20 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="example@mail.com"
           disabled={isSending}
-          className={`block w-full px-4 py-3 rounded-xl border bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm shadow-sm transition-all duration-300 focus:outline-none focus:ring-4 ${
-            errors.email
-              ? "border-red-400 focus:ring-red-500/10 focus:border-red-500"
-              : "border-gray-200 dark:border-gray-700 focus:ring-rose-500/10 focus:border-rose-500 hover:border-rose-300 dark:hover:border-rose-500"
+          className={`block w-full rounded-2xl border bg-[rgba(255,255,255,0.02)] px-4 py-3.5 text-sm text-white placeholder:text-[var(--muted)] transition-all duration-200 focus:outline-none ${
+            errors.email ? "border-red-400/80" : "border-[var(--line)] focus:border-[rgba(255,45,85,0.7)]"
           }`}
         />
         {errors.email && (
-          <div className="flex items-center gap-1.5 mt-1 text-red-500">
-            <AlertCircle size={14} />
-            <span className="text-xs font-medium">{errors.email}</span>
+          <div className="flex items-center gap-1.5 text-red-400">
+            <AlertCircle className="h-4 w-4" />
+            <span className="text-xs">{errors.email}</span>
           </div>
         )}
       </div>
 
-      {/* 💬 Message Field */}
-      <div className="flex flex-col gap-1.5">
-        <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+      <div className="flex flex-col gap-2">
+        <label className="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
           Message
         </label>
         <textarea
@@ -146,57 +132,53 @@ const ContactForm = () => {
           value={form.message}
           onChange={handleChange}
           placeholder="Tell me about your project..."
-          rows={4}
+          rows={5}
           disabled={isSending}
-          className={`block w-full px-4 py-3 rounded-xl border bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm shadow-sm transition-all duration-300 resize-none focus:outline-none focus:ring-4 ${
-            errors.message
-              ? "border-red-400 focus:ring-red-500/10 focus:border-red-500"
-              : "border-gray-200 dark:border-gray-700 focus:ring-rose-500/10 focus:border-rose-500 hover:border-rose-300 dark:hover:border-rose-500"
+          className={`block w-full resize-none rounded-2xl border bg-[rgba(255,255,255,0.02)] px-4 py-3.5 text-sm text-white placeholder:text-[var(--muted)] transition-all duration-200 focus:outline-none ${
+            errors.message ? "border-red-400/80" : "border-[var(--line)] focus:border-[rgba(255,45,85,0.7)]"
           }`}
         />
         {errors.message && (
-          <div className="flex items-center gap-1.5 mt-1 text-red-500">
-            <AlertCircle size={14} />
-            <span className="text-xs font-medium">{errors.message}</span>
+          <div className="flex items-center gap-1.5 text-red-400">
+            <AlertCircle className="h-4 w-4" />
+            <span className="text-xs">{errors.message}</span>
           </div>
         )}
       </div>
 
-      {/* 🚀 Submit Button Area */}
-      <div className="flex flex-col gap-3 pt-2">
+      <div className="pt-2">
         <button
           type="submit"
           disabled={isSending}
-          className="relative flex items-center justify-center gap-2 w-full px-6 py-3.5 text-sm font-bold tracking-wide text-white bg-rose-500 hover:bg-rose-600 active:bg-rose-700 rounded-xl shadow-lg shadow-rose-500/20 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed hover:-translate-y-0.5 active:translate-y-0"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,var(--accent),#ff7a59)] px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-[#08080C] shadow-[0_20px_40px_rgba(255,45,85,0.25)] transition-transform duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isSending ? (
             <>
-              <Loader2 className="w-5 h-5 animate-spin" />
+              <Loader2 className="h-4 w-4 animate-spin" />
               Verifying & Sending...
             </>
           ) : (
             <>
-              <SendHorizontal className="w-5 h-5" />
+              <SendHorizontal className="h-4 w-4" />
               Send Message
             </>
           )}
         </button>
 
-        {/* 📬 Status Message Banner */}
         {status && (
           <div
-            className={`flex items-center gap-2 p-3.5 rounded-xl border text-sm font-medium transition-all duration-500 ${
+            className={`mt-4 flex items-center gap-2 rounded-2xl border px-3 py-3 text-sm ${
               status.toLowerCase().includes("successfully")
-                ? "bg-green-50 dark:bg-green-500/10 border-green-200 dark:border-green-800 text-green-700 dark:text-green-400"
-                : "bg-red-50 dark:bg-red-500/10 border-red-200 dark:border-red-800 text-red-700 dark:text-red-400"
+                ? "border-[rgba(61,220,151,0.3)] bg-[rgba(61,220,151,0.08)] text-[var(--ok)]"
+                : "border-red-400/40 bg-[rgba(255,0,0,0.04)] text-red-300"
             }`}
           >
             {status.toLowerCase().includes("successfully") ? (
-              <CheckCircle2 size={18} className="flex-shrink-0" />
+              <CheckCircle2 className="h-4 w-4" />
             ) : (
-              <AlertCircle size={18} className="flex-shrink-0" />
+              <AlertCircle className="h-4 w-4" />
             )}
-            <p>{status}</p>
+            <span>{status}</span>
           </div>
         )}
       </div>

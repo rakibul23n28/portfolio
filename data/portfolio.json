@@ -30,23 +30,23 @@
     },
     {
       "name": "TypeScript",
-      "level": "80"
+      "level": "85"
     },
     {
       "name": "React/Next.js",
-      "level": "95"
+      "level": "97"
     },
     {
-      "name": "Node.js/Express",
-      "level": "90"
+      "name": "Node.js/Express/Nest.js",
+      "level": "94"
     },
     {
-      "name": "MySQL/MongoDB",
+      "name": "MySQL/MongoDB/PostgreSQL",
       "level": "85"
     },
     {
       "name": "Git/GitHub",
-      "level": "70"
+      "level": "90"
     },
 
     {

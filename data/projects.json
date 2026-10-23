@@ -17,7 +17,6 @@
     "readMoreUrl": "https://github.com/rakibul23n28/student-portal",
     "languages": ["Next.js", "Prisma", "TypeScript", "Clerk"]
   },
-
   {
     "image": "/projects/commune1.png",
     "category": "Community",
@@ -27,7 +26,6 @@
     "readMoreUrl": "https://github.com/rakibul23n28/Commune",
     "languages": ["Express", "Node.js", "Socket.IO", "JavaScript", "EJS"]
   },
-
   {
     "image": "/projects/startup1.png",
     "category": "Startup-Blog",
@@ -37,7 +35,6 @@
     "readMoreUrl": "https://github.com/rakibul23n28/Startup-Blog",
     "languages": ["Next.js", "Sanity", "TypeScript"]
   },
-
   {
     "image": "/projects/cprogram1.png",
     "category": "C-C++ Programming",
@@ -55,16 +52,6 @@
     "date": "May 23, 2025",
     "readMoreUrl": "https://github.com/rakibul23n28/image-processing-gemeni-api",
     "languages": ["Python", "OpenCV", "gemeni AI"]
-  },
-
-  {
-    "image": "/projects/figma1.png",
-    "category": "Figma Design",
-    "title": "Figma Design System",
-    "description": "A comprehensive design system built with Figma to streamline the design process.",
-    "date": "May 15, 2025",
-    "readMoreUrl": "https://www.figma.com/proto/zaL1AeGhNtceER4kIEHg8M/Untitled?node-id=41-129&t=bRgOTG5vII7onaF3-0&scaling=min-zoom&content-scaling=fixed&page-id=2%3A2",
-    "languages": ["Figma"]
   },
   {
     "image": "/projects/webgputriangle.png",
@@ -92,5 +79,32 @@
     "date": "November 2, 2026",
     "readMoreUrl": "https://github.com/rakibul23n28/uiu-shuttle-bus",
     "languages": ["Next.js", "Socket.IO", "Leaflet"]
+  },
+  {
+    "image": "/projects/drops-world.jpeg",
+    "category": "Journal",
+    "title": "Drops",
+    "description": "A life-in-weeks journal where each box represents one week. Save notes, moods, intentions, chapters, and memories, explore a demo world map of public drops, or share a public life profile.",
+    "date": "October 21, 2026",
+    "readMoreUrl": "https://github.com/rakibul23n28/A-life-one-week-at-a-time",
+    "languages": ["Next.js", "React", "Tailwind CSS", "React Three Fiber", "Payload"]
+  },
+  {
+    "image": "/projects/disaster-response.jpeg",
+    "category": "Disaster Management",
+    "title": "Real-Time Disaster Response Coordination Platform",
+    "description": "A modern disaster response coordination platform connecting citizens, volunteers, administrators, and relief agencies to manage emergency reports, map affected zones, assign tasks, and track resources in real time.",
+    "date": "June 1, 2025",
+    "readMoreUrl": "https://github.com/rakibul23n28/Real-Time-Disaster-Response-Coordination-Platform",
+    "languages": ["React", "TypeScript", "Node.js", "Express", "MySQL", "Tailwind CSS", "Leaflet"]
+  },
+  {
+    "image": "/projects/wander-home.jpeg",
+    "category": "Blogging",
+    "title": "wander.",
+    "description": "A full-stack personal travel blog and editorial journal featuring a tile-wall home layout, story search, categories, an owner writing workspace, and draft/publishing workflows.",
+    "date": "October 23, 2026",
+    "readMoreUrl": "https://github.com/rakibul23n28/wander",
+    "languages": ["React", "TypeScript", "Vite", "Tailwind CSS", "NestJS", "Prisma", "PostgreSQL", "Supabase"]
   }
 ]

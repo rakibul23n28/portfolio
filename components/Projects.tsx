@@ -9,7 +9,7 @@ type Project = {
   description: string;
   date: string;
   readMoreUrl: string;
-  languages?: string[]; // 👈 Made optional '?' to resolve the TypeScript mismatch
+  languages?: string[];
 };
 
 const truncateText = (text: string, maxLength: number) => {
@@ -19,64 +19,62 @@ const truncateText = (text: string, maxLength: number) => {
 
 const Projects = () => {
   return (
-    <div className="my-16 max-w-7xl mx-auto px-4 sm:px-6" id="projects">
-      {/* 🏷️ Section Header */}
-      <div className="flex flex-col gap-2 mb-12">
-        <h2 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+    <section className="py-20 sm:py-24" id="projects">
+      <div className="mb-10 flex flex-col gap-3">
+        <span className="text-[11px] font-medium uppercase tracking-[0.22em] text-[var(--muted)]">
+          Selected work
+        </span>
+        <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] leading-none tracking-[-0.06em] text-white">
           Project Gallery
         </h2>
-        <div className="flex items-center gap-1">
-          <span className="w-16 h-[3px] bg-rose-500 rounded-full"></span>
-          <span className="w-4 h-[3px] bg-rose-500 rounded-full"></span>
-        </div>
       </div>
 
-      {/* 🖥️ Projects Grid */}
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {visibleProjects.map((project: Project, index) => (
-          <div
-            key={index}
-            className="group flex flex-col h-full bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 overflow-hidden"
+          <article
+            key={`${project.title}-${index}`}
+            className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-[var(--line)] bg-[linear-gradient(180deg,rgba(22,22,32,0.94),rgba(12,12,18,0.94))] shadow-[0_24px_60px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(255,45,85,0.35)]"
           >
-            {/* Image Preview Container */}
-            <div className="relative w-full h-52 overflow-hidden">
-              <a
-                href={project.readMoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block h-full w-full"
-              >
-                <Image
-                  width={500}
-                  height={500}
-                  src={project.image}
-                  alt={project.title}
-                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300" />
-              </a>
-              <span className="absolute top-4 left-4 text-xs font-bold tracking-wider text-white bg-rose-500/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm">
-                {project.category}
-              </span>
+            <div className="absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top,rgba(255,45,85,0.28),transparent_70%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+            <div className="relative p-3">
+              <div className="relative h-52 overflow-hidden rounded-[1.5rem] border border-[var(--line)] bg-[rgba(255,255,255,0.02)]">
+                <a href={project.readMoreUrl} target="_blank" rel="noopener noreferrer" className="block h-full w-full">
+                  <Image
+                    width={800}
+                    height={600}
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,8,12,0.08),rgba(8,8,12,0.68))]" />
+                </a>
+                <span className="absolute left-3 top-3 rounded-full border border-white/10 bg-[rgba(8,8,12,0.65)] px-2.5 py-1 text-[9px] font-medium uppercase tracking-[0.18em] text-white backdrop-blur-md">
+                  {project.category}
+                </span>
+              </div>
             </div>
 
-            {/* Content Container */}
-            <div className="flex flex-col flex-1 p-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-rose-500 transition-colors duration-200">
+            <div className="relative flex flex-1 flex-col p-5 pt-2">
+              <div className="mb-3 flex items-center justify-between gap-3 text-[10px] uppercase tracking-[0.18em] text-[var(--muted)]">
+                <span>{project.date}</span>
+                <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[var(--accent)] shadow-[0_0_16px_rgba(255,45,85,0.7)]" />
+              </div>
+
+              <h3 className="text-2xl font-semibold tracking-[-0.05em] text-white transition-colors duration-200 group-hover:text-[var(--accent)]">
                 {project.title}
               </h3>
 
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 flex-1">
-                {truncateText(project.description, 100)}
+              <p className="mt-3 flex-1 text-sm leading-6 text-[var(--muted)]">
+                {truncateText(project.description, 118)}
               </p>
 
-              {/* 🛠️ Modern Tech Stack Badges */}
               {project.languages && project.languages.length > 0 && (
-                <div className="mt-4 flex flex-wrap gap-1.5">
+                <div className="mt-4 flex flex-wrap gap-2">
                   {project.languages.map((lang, lIdx) => (
                     <span
-                      key={lIdx}
-                      className="text-xs font-mono font-medium tracking-tight text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700/60 px-2.5 py-1 rounded-md"
+                      key={`${project.title}-${lang}-${lIdx}`}
+                      className="rounded-full border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.03)] px-2.5 py-1 text-[10px] uppercase tracking-[0.12em] text-white/80"
                     >
                       {lang}
                     </span>
@@ -84,42 +82,22 @@ const Projects = () => {
                 </div>
               )}
 
-              {/* Card Bottom Divider */}
-              <hr className="my-4 border-gray-100 dark:border-gray-700" />
-
-              <div className="flex items-center justify-between mt-auto">
-                <span className="text-xs font-medium text-gray-400 dark:text-gray-500">
-                  {project.date}
-                </span>
-
+              <div className="mt-5 border-t border-[var(--line)] pt-4">
                 <a
                   href={project.readMoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm font-semibold text-rose-500 hover:text-rose-600 transition-colors duration-200 group/link"
+                  className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[var(--accent)] transition-transform duration-200 group-hover:translate-x-1"
                 >
                   View Project
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 ml-1 transition-transform duration-200 group-hover/link:translate-x-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
+                  <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

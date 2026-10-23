@@ -1,20 +1,25 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
-import { Cormorant_Garamond, Inter } from "next/font/google"; // Added Inter for cleaner body text
+import { Bricolage_Grotesque, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 
-// Best used for massive headings
-const cormorantGaramond = Cormorant_Garamond({
-  weight: ["700"],
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-heading",
+  variable: "--font-bricolage",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-// Best used for readable interface text (paragraphs, buttons)
-const inter = Inter({
+const instrument = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-instrument",
+  weight: ["400"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -53,29 +58,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth h-full">
       <body
-        className={`${inter.variable} ${cormorantGaramond.variable} font-sans antialiased bg-slate-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col min-h-screen relative overflow-x-hidden`}
+        className={`${bricolage.variable} ${instrument.variable} ${jetbrains.variable} font-sans antialiased bg-[var(--bg)] text-[var(--text)] flex min-h-screen flex-col overflow-x-hidden`}
       >
-        {/* ✨ Ultra-Modern Mesh Gradient Glow Backgrounds */}
-        <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-          {/* Top Left Rose Glow */}
-          <div className="absolute top-[-100px] left-[-100px] h-[500px] w-[500px] rounded-full bg-rose-500/10 blur-[120px] dark:bg-rose-500/20" />
-
-          {/* Top Right Orange Glow */}
-          <div className="absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-orange-400/10 blur-[100px] dark:bg-orange-500/15" />
-
-          {/* Mid Left Violet/Rose Glow */}
-          <div className="absolute top-[40%] left-[-200px] h-[600px] w-[600px] rounded-full bg-rose-400/5 blur-[150px] dark:bg-rose-500/10" />
-
-          {/* Bottom Right Rose Glow */}
-          <div className="absolute bottom-[-100px] right-[-100px] h-[500px] w-[500px] rounded-full bg-rose-500/10 blur-[120px] dark:bg-rose-500/20" />
-        </div>
-
         <Header />
-
-        <main className="flex-grow lg:w-[80%] w-full mx-auto px-4 sm:px-10 lg:px-0 z-10">
+        <main className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-1 flex-col px-4 pb-10 sm:px-6 lg:px-8">
           {children}
         </main>
-
         <Footer />
       </body>
     </html>

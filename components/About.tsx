@@ -4,120 +4,92 @@ import { CheckCircle2, Link2Icon } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="flex items-center min-h-[70vh] py-16" id="about">
-      <div className="flex flex-col gap-12 dark:text-white w-full max-w-7xl mx-auto px-4">
-        {/* Section Header */}
-        <div className="flex flex-col gap-2">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-            About Me
-          </h2>
-          <div className="flex items-center gap-1">
-            <span className="w-16 h-[4px] bg-rose-500 rounded-full"></span>
-            <span className="w-4 h-[4px] bg-rose-500 rounded-full"></span>
+    <section className="py-20 sm:py-24" id="about">
+      <div className="mb-10 flex flex-col gap-3">
+        <span className="text-[11px] font-medium uppercase tracking-[0.22em] text-[var(--muted)]">
+          About
+        </span>
+        <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] leading-none tracking-[-0.06em] text-white">
+          The craft behind every build.
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+        <div className="lg:col-span-7 rounded-[2rem] border border-[var(--line)] bg-[rgba(17,17,24,0.9)] p-6 shadow-[0_28px_70px_rgba(0,0,0,0.35)] sm:p-8">
+          <div className="mb-7 flex items-center justify-between gap-4">
+            <h3 className="text-2xl font-semibold tracking-[-0.04em] text-white">Personal Information</h3>
+            <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(61,220,151,0.4)] bg-[rgba(61,220,151,0.08)] px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--ok)]">
+              <span className="h-2 w-2 rounded-full bg-[var(--ok)]" />
+              Open to work
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {[
+              { label: "Nationality", value: portfolio.personalInfo.nationality },
+              { label: "Location", value: portfolio.personalInfo.location },
+              { label: "Degree", value: portfolio.personalInfo.degree },
+              { label: "Employment", value: portfolio.personalInfo.employment },
+              { label: "Email", value: portfolio.personalInfo.email },
+              { label: "Phone", value: portfolio.personalInfo.phone },
+              { label: "Freelance", value: portfolio.personalInfo.freelance },
+            ].map((item) => (
+              <div key={item.label} className="rounded-2xl border border-[var(--line)] bg-white/3 p-4">
+                <span className="block text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
+                  {item.label}
+                </span>
+                <span className="mt-2 block text-base font-medium text-white">{item.value}</span>
+              </div>
+            ))}
+
+            <div className="rounded-2xl border border-[var(--line)] bg-white/3 p-4 md:col-span-2">
+              <span className="block text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
+                Website
+              </span>
+              <a
+                href={portfolio.personalInfo.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex items-center gap-2 text-base font-medium text-[var(--accent)] transition-colors hover:text-[#ff8ca1]"
+              >
+                Visit Website <Link2Icon className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-8 flex items-start gap-3 rounded-2xl border border-[rgba(255,45,85,0.22)] bg-[rgba(255,45,85,0.05)] p-4 text-sm leading-6 text-[var(--text)]">
+            <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" />
+            <p>
+              Open to collaborating on full-stack architecture, product thinking, and real-time TypeScript projects.
+            </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left: Personal Information Cards */}
-          <div className="lg:col-span-7 bg-white dark:bg-gray-800/50 dark:border dark:border-gray-700/50 p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full justify-between">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-                Personal Information
-              </h3>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                {[
-                  {
-                    label: "Nationality",
-                    value: portfolio.personalInfo.nationality,
-                  },
-                  { label: "Location", value: portfolio.personalInfo.location },
-                  { label: "Degree", value: portfolio.personalInfo.degree },
-                  {
-                    label: "Employment",
-                    value: portfolio.personalInfo.employment,
-                  },
-                  { label: "Email", value: portfolio.personalInfo.email },
-                  { label: "Phone", value: portfolio.personalInfo.phone },
-                  {
-                    label: "Freelance",
-                    value: portfolio.personalInfo.freelance,
-                  },
-                ].map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex flex-col py-2 border-b border-gray-100 dark:border-gray-700/50"
-                  >
-                    <span className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">
-                      {item.label}
-                    </span>
-                    <span className="text-sm font-medium text-gray-800 dark:text-gray-200 mt-1">
-                      {item.value}
-                    </span>
-                  </div>
-                ))}
-
-                {/* Website URL standalone link */}
-                <div className="flex flex-col py-2 border-b border-gray-100 dark:border-gray-700/50">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">
-                    Website
-                  </span>
-                  <a
-                    href={portfolio.personalInfo.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-sm font-medium text-rose-500 hover:text-rose-600 mt-1 underline decoration-dotted"
-                  >
-                    Visit Website <Link2Icon size={14} />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 flex items-center gap-3 p-4 bg-rose-50 dark:bg-rose-500/10 rounded-xl">
-              <CheckCircle2 className="text-rose-500 flex-shrink-0" size={24} />
-              <p className="text-sm text-gray-700 dark:text-gray-300">
-                Open to collaborating on full-stack architecture and real-time
-                typescript projects.
-              </p>
-            </div>
+        <div className="lg:col-span-5 rounded-[2rem] border border-[var(--line)] bg-[rgba(17,17,24,0.75)] p-6 shadow-[0_28px_70px_rgba(0,0,0,0.3)] sm:p-8">
+          <div className="mb-6">
+            <h3 className="text-2xl font-semibold tracking-[-0.04em] text-white">Technical Mastery</h3>
+            <p className="mt-2 text-sm text-[var(--muted)]">Proficiency weighted by project experience.</p>
           </div>
 
-          {/* Right: Modern Visual Statistics & Tech Badges */}
-          <div className="lg:col-span-5 flex flex-col gap-8 bg-gray-50 dark:bg-gray-800/40 p-8 rounded-2xl border border-gray-100 dark:border-gray-700/50 h-full">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                Technical Mastery
-              </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                Proficiency weighted by project experience.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-3">
-              {portfolio.skills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="group flex items-center gap-3 bg-white dark:bg-gray-800 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-rose-500 dark:hover:border-rose-500 transition-all duration-300 w-full sm:w-[calc(50%-0.5rem)]"
-                >
-                  <div className="flex flex-col flex-1">
-                    <span className="text-sm font-bold text-gray-800 dark:text-white group-hover:text-rose-500 transition-colors">
-                      {skill.name}
-                    </span>
-                    <span className="text-xs text-gray-400 dark:text-gray-500">
-                      Expertise level
-                    </span>
-                  </div>
-                  <span className="text-lg font-extrabold text-gray-900 dark:text-white font-mono">
-                    {skill.level}%
-                  </span>
+          <div className="space-y-4">
+            {portfolio.skills.map((skill) => (
+              <div key={skill.name} className="rounded-2xl border border-[var(--line)] bg-white/3 p-4">
+                <div className="mb-3 flex items-center justify-between gap-4">
+                  <span className="text-sm font-medium text-white">{skill.name}</span>
+                  <span className="text-sm font-semibold text-[var(--accent)]">{skill.level}%</span>
                 </div>
-              ))}
-            </div>
+                <div className="h-2.5 overflow-hidden rounded-full bg-[rgba(255,255,255,0.06)]">
+                  <div
+                    className="h-full rounded-full bg-[linear-gradient(90deg,var(--accent),#ff9a7a)] shadow-[0_0_18px_rgba(255,45,85,0.4)]"
+                    style={{ width: `${skill.level}%` }}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
