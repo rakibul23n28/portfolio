@@ -7,8 +7,8 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 
 const navItems = [
   { name: "Profile", href: "/" },
-  { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -117,7 +117,7 @@ export default function Header() {
     <header className="sticky top-0 z-[80] w-full pt-4">
       <div className="pointer-events-none fixed inset-x-0 top-0 z-[90] h-1.5 bg-transparent">
         <div
-          className="h-full bg-gradient-to-r from-[var(--accent)] via-[#FF8A7A] to-[var(--violet)] shadow-[0_0_18px_rgba(255,45,85,0.9)] transition-[width] duration-300 ease-out"
+          className="h-full bg-gradient-to-r from-[var(--accent)] via-[var(--accent-strong)] to-[var(--violet)] shadow-[0_0_18px_color-mix(in_srgb,var(--accent)_65%,transparent)] transition-[width] duration-300 ease-out"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -140,7 +140,7 @@ export default function Header() {
           <nav className="hidden items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface)] px-1 py-1 md:flex">
             <div className="relative grid grid-cols-4 items-center">
               <span
-                className="absolute left-0 top-1 bottom-1 rounded-full bg-[linear-gradient(135deg,rgba(255,45,85,0.9),rgba(255,134,109,0.75))] shadow-[0_0_18px_rgba(255,45,85,0.4)] transition-[transform,width] duration-300 ease-out"
+                className="absolute left-0 top-1 bottom-1 rounded-full bg-[linear-gradient(135deg,var(--accent-strong),var(--accent))] shadow-[0_0_18px_color-mix(in_srgb,var(--accent)_35%,transparent)] transition-[transform,width] duration-300 ease-out"
                 style={{
                   width: "25%",
                   transform: `translateX(${activeIndex * 100}%)`,
@@ -154,7 +154,7 @@ export default function Header() {
                     href={link.href}
                     onClick={(event) => handleNavigation(event, link.href)}
                     className={`relative z-10 rounded-full px-4 py-2 text-center text-[11px] font-medium tracking-[0.14em] uppercase transition-colors duration-200 ${
-                      isActive ? "text-[#08080C]" : "text-[var(--muted)] hover:text-[var(--text)]"
+                      isActive ? "text-[var(--accent-ink)]" : "text-[var(--muted)] hover:text-[var(--text)]"
                     }`}
                   >
                     {link.name}
@@ -177,7 +177,7 @@ export default function Header() {
             <Link
               href="/#contact"
               onClick={(event) => handleNavigation(event, "/#contact")}
-              className="inline-flex items-center justify-center rounded-full border border-[rgba(255,45,85,0.3)] bg-[linear-gradient(135deg,var(--accent),#ff7a59)] px-4 py-2 text-[11px] font-semibold tracking-[0.14em] text-[#08080C] uppercase shadow-[0_0_24px_rgba(255,45,85,0.35)] transition-transform duration-200 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center rounded-full border border-[color-mix(in_srgb,var(--accent)_40%,transparent)] bg-[linear-gradient(135deg,var(--accent-strong),var(--accent))] px-4 py-2 text-[11px] font-semibold tracking-[0.14em] text-[var(--accent-ink)] uppercase shadow-[0_0_24px_color-mix(in_srgb,var(--accent)_32%,transparent)] transition-transform duration-200 hover:-translate-y-0.5"
             >
               Hire me
             </Link>
@@ -234,7 +234,7 @@ export default function Header() {
                 setIsOpen(false);
                 handleNavigation(event, "/#contact");
               }}
-              className="mb-10 inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--accent),#ff7a59)] px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#08080C]"
+              className="mb-10 inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--accent-strong),var(--accent))] px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent-ink)]"
             >
               Hire me
             </Link>

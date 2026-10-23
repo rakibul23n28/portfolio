@@ -88,8 +88,8 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="John Doe"
           disabled={isSending}
-          className={`block w-full rounded-2xl border bg-[rgba(255,255,255,0.02)] px-4 py-3.5 text-sm text-white placeholder:text-[var(--muted)] transition-all duration-200 focus:outline-none ${
-            errors.name ? "border-red-400/80" : "border-[var(--line)] focus:border-[rgba(255,45,85,0.7)]"
+          className={`block w-full rounded-2xl border bg-[var(--surface)] px-4 py-3.5 text-sm text-[var(--text)] placeholder:text-[var(--muted)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[color-mix(in_srgb,var(--accent)_18%,transparent)] ${
+            errors.name ? "border-red-400/80" : "border-[var(--line)] focus:border-[var(--accent)]"
           }`}
         />
         {errors.name && (
@@ -111,8 +111,8 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="example@mail.com"
           disabled={isSending}
-          className={`block w-full rounded-2xl border bg-[rgba(255,255,255,0.02)] px-4 py-3.5 text-sm text-white placeholder:text-[var(--muted)] transition-all duration-200 focus:outline-none ${
-            errors.email ? "border-red-400/80" : "border-[var(--line)] focus:border-[rgba(255,45,85,0.7)]"
+          className={`block w-full rounded-2xl border bg-[var(--surface)] px-4 py-3.5 text-sm text-[var(--text)] placeholder:text-[var(--muted)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[color-mix(in_srgb,var(--accent)_18%,transparent)] ${
+            errors.email ? "border-red-400/80" : "border-[var(--line)] focus:border-[var(--accent)]"
           }`}
         />
         {errors.email && (
@@ -134,8 +134,8 @@ const ContactForm = () => {
           placeholder="Tell me about your project..."
           rows={5}
           disabled={isSending}
-          className={`block w-full resize-none rounded-2xl border bg-[rgba(255,255,255,0.02)] px-4 py-3.5 text-sm text-white placeholder:text-[var(--muted)] transition-all duration-200 focus:outline-none ${
-            errors.message ? "border-red-400/80" : "border-[var(--line)] focus:border-[rgba(255,45,85,0.7)]"
+          className={`block w-full resize-none rounded-2xl border bg-[var(--surface)] px-4 py-3.5 text-sm text-[var(--text)] placeholder:text-[var(--muted)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[color-mix(in_srgb,var(--accent)_18%,transparent)] ${
+            errors.message ? "border-red-400/80" : "border-[var(--line)] focus:border-[var(--accent)]"
           }`}
         />
         {errors.message && (
@@ -150,7 +150,7 @@ const ContactForm = () => {
         <button
           type="submit"
           disabled={isSending}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,var(--accent),#ff7a59)] px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-[#08080C] shadow-[0_20px_40px_rgba(255,45,85,0.25)] transition-transform duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,var(--accent-strong),var(--accent))] px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-[var(--accent-ink)] shadow-[0_20px_40px_color-mix(in_srgb,var(--accent)_25%,transparent)] transition-transform duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isSending ? (
             <>

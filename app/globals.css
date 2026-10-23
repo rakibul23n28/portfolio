@@ -10,39 +10,49 @@
 }
 
 :root {
-  --bg: #08080c;
-  --surface: #101017;
-  --surface-hi: #171722;
-  --line: rgba(255, 255, 255, 0.08);
-  --text: #f4f4f6;
-  --muted: #9a9aa8;
-  --accent: #ff2d55;
-  --accent-strong: #ff5176;
-  --violet: #7c5cff;
-  --ok: #3ddc97;
-  --shadow: rgba(11, 11, 19, 0.65);
-  --card: rgba(17, 17, 24, 0.9);
-  --nav-glass: rgba(12, 12, 18, 0.7);
-  --menu-overlay: rgba(8, 8, 12, 0.9);
-  --selection: rgba(255, 45, 85, 0.35);
+  color-scheme: dark;
+  --bg: #110d13;
+  --surface: #1b151d;
+  --surface-hi: #261c28;
+  --line: rgba(225, 193, 218, 0.14);
+  --text: #f5edf3;
+  --muted: #b4a5b3;
+  --accent: #e59ab4;
+  --accent-strong: #f2b8c9;
+  --accent-ink: #351d2b;
+  --violet: #b7a5ca;
+  --ok: #91c8a6;
+  --shadow: rgba(17, 10, 19, 0.65);
+  --card: rgba(31, 23, 33, 0.92);
+  --nav-glass: rgba(26, 19, 29, 0.78);
+  --menu-overlay: rgba(17, 13, 19, 0.94);
+  --selection: rgba(229, 154, 180, 0.32);
+  --scroll-track: #1a141c;
+  --scroll-thumb: linear-gradient(180deg, #dda0b7, #70435f);
+  --scroll-thumb-hover: linear-gradient(180deg, #f2b8c9, #9b5d7a);
 }
 
 :root[data-theme="light"] {
-  --bg: #f5f3f8;
-  --surface: #ffffff;
-  --surface-hi: #f2eff8;
-  --line: rgba(15, 23, 42, 0.1);
-  --text: #171722;
-  --muted: #5e6170;
-  --accent: #ff2d55;
-  --accent-strong: #ff5176;
-  --violet: #7c5cff;
-  --ok: #149a5b;
-  --shadow: rgba(15, 23, 42, 0.08);
-  --card: rgba(255, 255, 255, 0.92);
-  --nav-glass: rgba(255, 255, 255, 0.72);
-  --menu-overlay: rgba(245, 243, 248, 0.9);
-  --selection: rgba(255, 45, 85, 0.18);
+  color-scheme: light;
+  --bg: #f1ebf4;
+  --surface: #fffaf7;
+  --surface-hi: #eee5f0;
+  --line: rgba(74, 44, 69, 0.14);
+  --text: #38283a;
+  --muted: #786a7b;
+  --accent: #87475f;
+  --accent-strong: #a45d78;
+  --accent-ink: #fff8f4;
+  --violet: #756287;
+  --ok: #527c62;
+  --shadow: rgba(58, 38, 58, 0.1);
+  --card: rgba(255, 250, 247, 0.92);
+  --nav-glass: rgba(255, 250, 247, 0.78);
+  --menu-overlay: rgba(241, 235, 244, 0.94);
+  --selection: rgba(135, 71, 95, 0.2);
+  --scroll-track: #e8dfeb;
+  --scroll-thumb: linear-gradient(180deg, #d28da7, #684359);
+  --scroll-thumb-hover: linear-gradient(180deg, #bd718f, #4d3047);
 }
 
 html {
@@ -52,9 +62,9 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(255, 45, 85, 0.14), transparent 30%),
-    radial-gradient(circle at top right, rgba(124, 92, 255, 0.18), transparent 26%),
-    linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 90%, #101017) 100%);
+    radial-gradient(circle at 8% 0%, color-mix(in srgb, var(--accent) 15%, transparent), transparent 30%),
+    radial-gradient(circle at 92% 12%, color-mix(in srgb, var(--violet) 14%, transparent), transparent 28%),
+    linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 88%, var(--surface)) 100%);
   color: var(--text);
   font-family: var(--font-bricolage), Arial, sans-serif;
 }
@@ -65,11 +75,13 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-  background-size: 36px 36px;
-  mask-image: radial-gradient(circle at center, black 20%, transparent 96%);
-  opacity: 0.5;
+    radial-gradient(color-mix(in srgb, var(--accent) 24%, transparent) 0.7px, transparent 0.8px),
+    linear-gradient(color-mix(in srgb, var(--text) 3%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--text) 3%, transparent) 1px, transparent 1px);
+  background-position: 0 0, 0 0, 0 0;
+  background-size: 24px 24px, 48px 48px, 48px 48px;
+  mask-image: radial-gradient(ellipse at 50% 20%, black 0%, transparent 84%);
+  opacity: 0.55;
 }
 
 body::after {
@@ -78,12 +90,10 @@ body::after {
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(rgba(255, 255, 255, 0.12) 0.7px, transparent 0.7px),
-    radial-gradient(rgba(255, 255, 255, 0.09) 0.7px, transparent 0.7px);
-  background-position: 0 0, 18px 18px;
-  background-size: 36px 36px;
-  opacity: 0.08;
-  mix-blend-mode: screen;
+    radial-gradient(color-mix(in srgb, var(--accent) 18%, transparent) 0.7px, transparent 0.8px);
+  background-position: 12px 12px;
+  background-size: 48px 48px;
+  opacity: 0.3;
 }
 
 ::selection {
@@ -128,14 +138,20 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--scroll-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--scroll-thumb);
   border-radius: 999px;
+  border: 2px solid var(--scroll-track);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.24);
+  background: var(--scroll-thumb-hover);
+}
+
+* {
+  scrollbar-color: #9d6882 var(--scroll-track);
+  scrollbar-width: thin;
 }
